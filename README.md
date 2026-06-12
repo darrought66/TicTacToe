@@ -1,59 +1,60 @@
-# TicTacToe
+# Towers of Hanoi
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+A fully interactive online Tic-Tac-Toe game. The project illustrates some
+ideas of Game Theory, basic neural networks and serverless programming on 
+AWS.
 
-## Development server
+The random and minimax options use lambdas that read from a DynamoDB. The 
+data was generated with a Python program. 
 
-To start a local development server, run:
+The neural network option calls a Python based neural network via a lambda.
 
-```bash
-ng serve
-```
+The rules engine option is Typescript. 
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Random: Chooses from the moves available randomly.
+Rules Engine: uses a small set of heuristic rules to choose a move.
+Minimax: Use the classic algorithm from game theory.
+Minimax with Look-Ahead: an enhanced version of minimax.
+Neural Network: calls a neural network to choose a move.
 
-## Code scaffolding
+**History & Details: [https://en.wikipedia.org/wiki/Tic-tac-toe](https://en.wikipedia.org/wiki/Tic-tac-toe)**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+**Live Demo:** [http://www.darrought66.com/](http://www.darrought66.com/)
 
-```bash
-ng generate component component-name
-```
+## Tech Stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Angular** 21 (standalone components, signals / `model()` where used)
+- **TypeScript** 5.9
+- **Unit tests:** `ng test` (Vitest via Angular’s test builder—see `angular.json`)
+- Node v25.9.0
+- Python 3.14.5
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Getting Started
 
 ```bash
-ng test
+npm install
+npm start
 ```
 
-## Running end-to-end tests
+Then open the URL shown in the terminal (usually `http://localhost:4200/`).
 
-For end-to-end (e2e) testing, run:
+Other scripts:
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+| Command         | Description                     |
+| --------------- | ------------------------------- |
+| `npm run build` | Production build output         |
+| `npm run watch` | Development build in watch mode |
+| `npm test`      | Unit tests                      |
 
-## Additional Resources
+## License
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the **Apache License 2.0**—see the `[LICENSE](./LICENSE)` file (copyright: Timorhy "Rob" Darrough Jr.).
+
+## Contributing / contact
+
+**darrought66@gmail.com**
+
+**There is no bug tracker, just email me.**
+
+It is Apache license, meaning your free to use it however you wish, whether that be an example in a course, book, Udemy or YouTube video or start your own project doing it your way. Indeed, I would love to know if you found this useful.

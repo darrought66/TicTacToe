@@ -1,0 +1,60 @@
+ /* Step 1: Target the parent table */
+  table {
+    border-collapse: collapse; 
+    border-style: hidden;      
+    width: 300px;              
+    height: 300px;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px; /* Optional: adds clean spacing between menu and game board */
+  }
+
+  /* Step 2: Target the internal cells */
+  td {
+    border: 2px solid #333; 
+    width: 60px;
+    height: 60px;   
+  }
+
+  /* FIX 1: Change flex-direction to column to stack elements vertically */
+  .grandparent-container {
+    display: flex;
+    flex-direction: column;  /* Stacks menu bar on top, table on bottom */
+    align-items: center;     /* Centers all stacked elements horizontally */
+    width: 100%;
+    min-height: 100vh;       /* Optional: Centers everything vertically on screen */
+    justify-content: center; /* Optional: Centers everything vertically on screen */
+  }
+
+  /* Step 1: Set up the Flexbox container */
+  .parent-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    width: 600px;                    
+    border: 1px solid #ccc;         
+    padding: 10px;
+    box-sizing: border-box; /* Prevents padding from breaking the 600px width */
+  }
+
+  /* Step 2: Ensure the center and right items occupy equal flex space */
+  .left-group,
+  .center-item,
+  .right-item {
+    flex: 1; 
+  }
+
+  /* Step 3: Align the content inside the center and right flex zones */
+  .center-item {
+    text-align: center;
+  }
+
+  .right-item {
+    text-align: right;
+  }
+
+  /* Optional spacing for the elements inside the left group */
+  .left-group * {
+    margin-right: 8px;
+  }  
+  

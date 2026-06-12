@@ -1,0 +1,33 @@
+
+  <div class="grandparent-container">
+    <div class="parent-container">
+      <div class="left-group">
+        <span>Your Player</span>
+        <select #YourPlayer>
+          <option>X</option>
+          <option>O</option>
+        </select>
+      </div>
+      <span class="center-item" #MsgBox>Good Luck</span>
+      <div class="right-item">
+        <button (click)="onStartGame()">Start Game</button>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <td #Cell (click)="onClick(0)"></td>
+        <td #Cell (click)="onClick(1)"></td>
+        <td #Cell (click)="onClick(2)"></td>
+      </tr>
+      <tr>
+        <td #Cell (click)="onClick(3)"></td>
+        <td #Cell (click)="onClick(4)"></td>
+        <td #Cell (click)="onClick(5)"></td>
+      </tr>
+      <tr>
+        <td #Cell (click)="onClick(6)"></td>
+        <td #Cell (click)="onClick(7)"></td>
+        <td #Cell (click)="onClick(8)"></td>
+      </tr>
+    </table>
+  </div>
