@@ -1,4 +1,4 @@
-# Towers of Hanoi
+# Tic Tac Toe
 
 A fully interactive online Tic-Tac-Toe game. The project illustrates some
 ideas of Game Theory, basic neural networks and serverless programming on 
